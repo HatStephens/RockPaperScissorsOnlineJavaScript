@@ -1,10 +1,39 @@
 <DOCTYPE html>
+<html>
 
 <head>
 	<title>Rock, Paper, Scissors</title>
-	<link 
+	<link type="text/css" rel="stylesheet" href="public/css/reset.css"/>
+	<link type="text/css" rel="stylesheet" href="public/css/stylesheet.css"/>
 </head>
 
 <body>
+	<header>
+		<h1>Welcome To Rock, Paper, Scissors</h1>
+		<h3>Why don't you play a game against our resident mouse!</h3>
+	</header>
+	
+	<section>
+		<article id="rock">
+			<img src='public/images/Rock.png' alt='The Rock Gesture'/>
+			<p>Rock</p>
+		</article>
+		<article>
+			<img src='public/images/Paper.png' alt='The Paper Gesture'/>
+			<p>Paper</p>
+		</article>
+		<article>
+			<img src='public/images/Scissors.png' alt='The Scissors Gesture'/>
+			<p>Scissors</p>
+		</article>	
+	</section>
+	
+	<script src='src/RockPaperScissors.js'></script>
+	<script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+	<script>
+		document.getElementById('rock').onclick = function(){ alert("Boooom!")};
+	</script>
 
 </body>
+
+</html>
