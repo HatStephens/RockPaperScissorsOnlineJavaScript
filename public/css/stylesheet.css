@@ -3,6 +3,10 @@
    src: url('fonts/waltograph42.ttf');
 }
 
+body {
+	background-color: #ffffff;
+}
+
 header {
 	width: 100%;
 	text-align: center;
@@ -24,6 +28,13 @@ h3 {
 
 section {
 	display: flex;
+	width: 800px;
+	margin: 0px auto;
+}
+
+article {
+	margin: 50px auto;
+	height: 300px;
 }
 
 p {
