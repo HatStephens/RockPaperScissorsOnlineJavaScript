@@ -1,0 +1,28 @@
+<DOCTYPE html>
+<html>
+
+<head>
+	<title>Rock, Paper, Scissors</title>
+	<link type="text/css" rel="stylesheet" href="css/reset.css"/>
+	<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+</head>
+
+<body>
+	<header>
+		<h1>Welcome To Rock, Paper, Scissors</h1>
+	</header>
+
+	<%= yield %>
+
+	
+	
+	<script src='src/RockPaperScissors.js'></script>
+	<script src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+	
+	<script>
+		document.getElementById('rock').onclick = function(){ alert("Boooom!")};
+	</script>
+
+</body>
+
+</html>

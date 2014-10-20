@@ -24,11 +24,3 @@ RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 			return gestureTwo.type;
 		
 };
-
-
-
-
-// else if (gestureOne.type === "Rock") 
-// 			return gestureOne.type;
-// 	else 
-// 		return gestureTwo.type;
