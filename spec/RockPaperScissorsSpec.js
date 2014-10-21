@@ -68,3 +68,36 @@ describe('RockPaperScissors', function() {
 	});
 
 });
+
+describe('Player', function() {
+
+	beforeEach(function() {
+		player = new Player;
+	});
+
+	it('should generate a new instance of a Rock when "Rock" is passed to it', function() {
+			player.choiceToFunction("Rock");
+		  expect(player.choice.type).toEqual("Rock");
+	});
+
+	it('should generate a new instance of a Paper when "Paper" is passed to it', function() {
+			player.choiceToFunction("Paper");
+		  expect(player.choice.type).toEqual("Paper");
+	});
+
+	it('should generate a new instance of a Scissors when "Scissors" is passed to it', function() {
+			player.choiceToFunction("Scissors");
+		  expect(player.choice.type).toEqual("Scissors");
+	});
+
+	it('should not generate a new instance of anything when a random string is passed to it', function() {
+			player.choiceToFunction("Random");
+		  expect(player.choice).toBe(null);
+	});
+
+});
+
+describe('Enemy', function() {
+	
+	
+});

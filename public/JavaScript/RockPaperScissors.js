@@ -1,5 +1,9 @@
 function RockPaperScissors() {};
 
+function Player() {
+	this.choice = null;
+};
+
 function Rock() {
 	this.type = "Rock";
 	this.beats = "Scissors";
@@ -22,5 +26,14 @@ RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 			return gestureOne.type;
 	else 
 			return gestureTwo.type;
-		
 };
+
+Player.prototype.choiceToFunction = function(gesture) {
+	if(gesture === "Rock") return this.choice = new Rock();
+	if(gesture === "Paper") return this.choice = new Paper();
+	if(gesture === "Scissors") return this.choice = new Scissors();
+};
+
+
+
+
