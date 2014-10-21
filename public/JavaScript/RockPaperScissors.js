@@ -4,6 +4,10 @@ function Player() {
 	this.choice = null;
 };
 
+function Enemy() {
+	this.gestures = [new Rock, new Paper, new Scissors];
+};
+
 function Rock() {
 	this.type = "Rock";
 	this.beats = "Scissors";

@@ -98,6 +98,9 @@ describe('Player', function() {
 });
 
 describe('Enemy', function() {
-	
-	
+
+	it('should have an array with all three gestures in', function() {
+		enemy = new Enemy;
+		expect(enemy.gestures.length).toEqual(3);
+	});
 });
