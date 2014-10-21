@@ -26,11 +26,21 @@ function Scissors() {
 
 RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
 	if(gestureOne.type === gestureTwo.type)
-		return "Draw";
+		return this.winningMessage("Draw");
 	else if (gestureOne.beats === gestureTwo.type)
-			return gestureOne.type;
+			return this.winningMessage(gestureOne.type, "Player");
 	else 
-			return gestureTwo.type;
+			return this.winningMessage(gestureTwo.type, "Enemy");
+};
+
+RockPaperScissors.prototype.winningMessage = function(result, winner) {
+	if(result === "Draw") return "Wow! You both chose the same gesture. It's a draw!"
+	if(result === "Rock" && winner === "Player") return "Well done! Your Rock broke the pair of Scissors. You Win!";
+	if(result ===	"Paper" && winner === "Player") return "Brilliant! Your piece of Paper covered the Rock. You Win!";
+	if(result === "Scissors" && winner === "Player") return "Fantastic! Your Scissors cut up the piece of Paper. You Win!";
+	if(result === "Rock" && winner === "Enemy") return "Unlucky! The Rock broke your pair of Scissors. You Lose!";
+	if(result ===	"Paper" && winner === "Enemy") return "Oh no! The piece of Paper covered your Rock. You Lose!";
+	if(result === "Scissors" && winner === "Enemy") return "Ooops! The Scissors cut up your piece of Paper. You Lose!";
 };
 
 Player.prototype.choiceToFunction = function(gesture) {
@@ -44,5 +54,9 @@ Enemy.prototype.getEnemyChoice = function() {
 	return this.chosenGesture;
 }
 
+
+// Well done! Your Rock broke the pair of Scissors. You Win!
+// Brilliant! Your Paper covered the Rock. You Win!
+// Fantastic! Your Scissors cut up the piece of Paper. You Win!
 
 

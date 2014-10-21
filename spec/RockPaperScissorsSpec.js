@@ -3,7 +3,8 @@ describe('RockPaperScissors', function() {
 	beforeEach(function () {
 		rock = new Rock;
 		paper = new Paper;
-		scissors = new Scissors		
+		scissors = new Scissors;
+		game = new RockPaperScissors;		
 	});
 
 
@@ -24,10 +25,6 @@ describe('RockPaperScissors', function() {
 	});
 
 	describe('rules of the game', function () {
-			
-			beforeEach(function() {
-				game = new RockPaperScissors
-			});
 
 		it('rock beats scissors', function() {
 			expect(game.decideWinnerOf(rock, scissors)).toEqual("Rock")
@@ -38,11 +35,11 @@ describe('RockPaperScissors', function() {
 		});
 
 		it('rock draws with rock', function() {
-			expect(game.decideWinnerOf(rock, rock)).toEqual("Draw")
+			expect(game.decideWinnerOf(rock, rock)).toEqual("Wow! You both chose the same gesture. It's a draw!")
 		});
 
 		it('scissors draws with scissors', function() {
-			expect(game.decideWinnerOf(scissors, scissors)).toEqual("Draw")
+			expect(game.decideWinnerOf(scissors, scissors)).toEqual("Wow! You both chose the same gesture. It's a draw!")
 		});
 
 		it('Scissors beats paper', function() {
@@ -54,7 +51,7 @@ describe('RockPaperScissors', function() {
 		});
 
 		it('paper draws with paper', function() {
-			expect(game.decideWinnerOf(paper, paper)).toEqual("Draw")
+			expect(game.decideWinnerOf(paper, paper)).toEqual("Wow! You both chose the same gesture. It's a draw!")
 		});
 
 		it('Paper beats rock', function() {

@@ -26,6 +26,10 @@ h3 {
 	text-align: center;
 }
 
+h3.result{
+	color: red;
+}
+
 section {
 	display: flex;
 	width: 800px;
