@@ -99,8 +99,16 @@ describe('Player', function() {
 
 describe('Enemy', function() {
 
-	it('should have an array with all three gestures in', function() {
+	beforeEach(function() {
 		enemy = new Enemy;
+	});
+
+	it('should have an array with all three gestures in', function() {
 		expect(enemy.gestures.length).toEqual(3);
+	});
+
+	it('should be able to pick a gesture at random', function() {
+		enemy.getEnemyChoice();
+		expect(enemy.chosenGesture).toBeDefined();
 	});
 });

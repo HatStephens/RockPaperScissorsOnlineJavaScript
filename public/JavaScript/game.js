@@ -3,7 +3,7 @@
 $('img').on('click', function() { 
 	var game = new RockPaperScissors();
 	var player = new Player();
-	// var enemy = new Enemy();
+	var enemy = new Enemy();
 	var playerChoice = $(this).data('gesture');
 	$('h3').text(game.decideWinnerOf(player.choiceToFunction(playerChoice), enemy.getEnemyChoice()));
 });

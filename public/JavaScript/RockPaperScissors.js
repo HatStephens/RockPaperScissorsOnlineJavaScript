@@ -6,6 +6,7 @@ function Player() {
 
 function Enemy() {
 	this.gestures = [new Rock, new Paper, new Scissors];
+	this.chosenGesture = null;
 };
 
 function Rock() {
@@ -38,6 +39,10 @@ Player.prototype.choiceToFunction = function(gesture) {
 	if(gesture === "Scissors") return this.choice = new Scissors();
 };
 
+Enemy.prototype.getEnemyChoice = function() {
+	this.chosenGesture = this.gestures[Math.floor(Math.random() * this.gestures.length)]
+	return this.chosenGesture;
+}
 
 
 
