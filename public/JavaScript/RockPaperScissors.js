@@ -1,4 +1,6 @@
-function RockPaperScissors() {};
+function RockPaperScissors() {
+	this.playerWin = false;
+};
 
 function Player() {
 	this.choice = null;
@@ -25,12 +27,18 @@ function Scissors() {
 };
 
 RockPaperScissors.prototype.decideWinnerOf = function(gestureOne, gestureTwo) {
-	if(gestureOne.type === gestureTwo.type)
+	if(gestureOne.type === gestureTwo.type)	{
+		this.playerWin = false;
 		return this.winningMessage("Draw");
-	else if (gestureOne.beats === gestureTwo.type)
-			return this.winningMessage(gestureOne.type, "Player");
-	else 
-			return this.winningMessage(gestureTwo.type, "Enemy");
+	}
+	else if (gestureOne.beats === gestureTwo.type){
+		this.playerWin = true;
+		return this.winningMessage(gestureOne.type, "Player");
+	}
+	else {
+		this.playerWin = false;	
+		return this.winningMessage(gestureTwo.type, "Enemy");
+	}
 };
 
 RockPaperScissors.prototype.winningMessage = function(result, winner) {

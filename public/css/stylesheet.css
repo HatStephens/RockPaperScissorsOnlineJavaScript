@@ -3,8 +3,14 @@
    src: url('fonts/waltograph42.ttf');
 }
 
-body {
+body.normal {
 	background-color: #ffffff;
+);
+
+}
+
+body.win {
+	background: url('../css/images/fireworksFade.jpg') fixed center;
 }
 
 header {
@@ -50,4 +56,8 @@ p {
 
 img:hover {
 	cursor: pointer;
+}
+
+img {
+	margin: 30px 10px 30px 10px;
 }
