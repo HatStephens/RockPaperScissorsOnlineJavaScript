@@ -63,8 +63,3 @@ Enemy.prototype.getEnemyChoice = function() {
 }
 
 
-// Well done! Your Rock broke the pair of Scissors. You Win!
-// Brilliant! Your Paper covered the Rock. You Win!
-// Fantastic! Your Scissors cut up the piece of Paper. You Win!
-
-

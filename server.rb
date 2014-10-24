@@ -1,6 +1,6 @@
 require 'sinatra'
 
-set :views, Proc.new {File.join(root, '..', 'views')}
+set :views, 'views'
 set :public_folder, 'public'
 
 get '/' do
